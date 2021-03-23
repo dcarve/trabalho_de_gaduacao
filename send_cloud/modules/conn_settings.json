@@ -1,0 +1,10 @@
+{
+    "SGDBS":
+		{"POSTGRE_DEV":
+			{"HOST":"motty.db.elephantsql.com",
+			"DB" : "zoyvfauw",
+			"USER": "zoyvfauw",
+			"PWD":"XUJ0n-jRY76gJMhkG0oaCl6HYYV2rMaB"
+		}
+	}
+}	

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en-US" class="no-js">
+<head>
+<title>Final work - IAR</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel='stylesheet' href="{{url_for('static', filename='assets/css/bootstrap.min.css')}}" type='text/css' media='all'/>
+<link rel='stylesheet' href="{{url_for('static', filename='assets/css/animate.min.css')}}" type='text/css' media='all'/>
+<link rel='stylesheet' href="{{url_for('static', filename='style.css')}}"  type='text/css' media='all'/>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C700italic%2C300%2C400%2C700%2C800%7CMontserrat%3A300italic%2C400italic%2C700italic%2C300%2C400%2C700%7CDosis%3A400%2C700&#038;ver=4.5' type='text/css' media='all'/>
+<link rel='stylesheet' href="{{url_for('static', filename='icons/elegantline/style.css')}}" type='text/css' media='all'/>
+<link rel='stylesheet' href="{{url_for('static', filename='assets/css/font-awesome.min.css')}}" type='text/css' media='all' />
+<link rel='stylesheet' href="{{url_for('static', filename='assets/css/flexslider.css')}}" type='text/css' media='all'/>
+</head>
+<body class="frontpage">
+<div class="page-loader">
+	<img src="{{url_for('static', filename='assets/img/loader.gif')}}"  alt="loader">
+</div>
+
+<!-- Header
+================================================== -->
+<header id="header">
+<div id="mega-menu" class="header header2 header-sticky primary-menu icons-no default-skin zoomIn align-right">
+	<nav class="navbar navbar-default redq">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="index.html">
+			<img src="{{url_for('static', filename='assets/img/logo_final_work.png')}}"  alt="logo">
+			</a>
+		</div>
+		<div class="collapse navbar-collapse" id="navbar">
+			<a class="mobile-menu-close"><i class="fa fa-close"></i></a>
+			<div class="menu-top-menu-container">
+				<ul id="menu-top-menu" class="nav navbar-nav nav-list">
+					<li><a href="#config">Edit Config</a></li>
+					<li><a href="#current_config">Current Config</a></li>
+					<li><a href="#disclaimer">Disclaimer</a></li>
+					<li style="background: rgba(255, 255, 0, 0.51);"><a target="_blank" href="https://www.wowthemes.net/themes/expertum/">WP Version</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- /.navbar-collapse -->
+	</div>
+	<!-- /.container -->
+	</nav>
+</div>
+</header>	
+
+
+
+
+
+
+<!-- EDIT CONFIG SLOTS
+================================================== -->
+<section id="config" style="padding:160px 0;background-image: url({{url_for('static', filename='assets/img/background_intro.jpg')}}); background-position: center; background-repeat: no-repeat;background-size: cover;background-attachment:fixed;">
+	<div class="container">
+		<div class="textwidget">
+			<h1 class="toptitle">EDIT CONFIG SLOTS<br/><br/><img src="{{url_for('static', filename='assets/img/chip_v1.png')}}" alt="chip">
+			</h1>								
+			<div class="contactstyle topform">										
+				<form method="POST">
+					<div class="form">
+						<table  style="width:100%">
+							<tr>
+								<th style="text-align:center">
+								<table style="width:100%" >
+									<tr>
+										<th style="text-align:left">SLOTS</th>
+										<th style="text-align:center">DEFINE NOME SLOT</th>
+									</tr>
+								</table>
+								</th>	
+								<th style="text-align:right">READ</th>	
+							</tr>
+							<tr>
+								<td><img src="{{url_for('static', filename='assets/img/bar_v3.png')}}" alt="chip"></td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>
+								<table style="width:100%" >
+									<tr>
+										<td>SLOT 1</td>
+										<td><input type="text" name="name_slot_1" value="{{ name_slot_1 }}" placeholder="NAME SLOT"></td>
+									</tr>
+									<tr>
+										<td>DESCRIPT</td>
+										<td><input type="text" name="description_slot_1" value="{{ description_slot_1 }}" placeholder="DESCRIPTION SLOT"></td>
+									</tr>
+								</table>
+								</td>	
+								<td><input type="checkbox" name="read_slot_1" {{read_slot_1}}></td>	
+							</tr>
+							<tr>
+								<td><img src="{{url_for('static', filename='assets/img/bar_v3.png')}}" alt="chip"></td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>
+								<table style="width:100%" >
+									<tr>
+										<td>SLOT 2</td>
+										<td><input type="text" name="name_slot_2" value="{{ name_slot_2 }}" placeholder="NAME SLOT"></td>
+									</tr>
+									<tr>
+										<td>DESCRIPT</td>
+										<td><input type="text" name="description_slot_2" value="{{ description_slot_2 }}" placeholder="DESCRIPTION SLOT"></td>
+									</tr>
+								</table>
+								</td>	
+								<td><input type="checkbox" name="read_slot_2" {{read_slot_2}}></td>	
+							</tr>
+							<tr>
+								<td><img src="{{url_for('static', filename='assets/img/bar_v3.png')}}" alt="chip"></td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>
+								<table style="width:100%" >
+									<tr>
+										<td>SLOT 3</td>
+										<td><input type="text" name="name_slot_3" value="{{ name_slot_3 }}" placeholder="NAME SLOT"></td>
+									</tr>
+									<tr>
+										<td>DESCRIPT</td>
+										<td><input type="text" name="description_slot_3"  value="{{ description_slot_3 }}" placeholder="DESCRIPTION SLOT"></td>
+									</tr>
+								</table>
+								</td>	
+								<td><input type="checkbox" name="read_slot_3" {{read_slot_3}}></td>	
+							</tr>
+							<tr>
+								<td><img src="{{url_for('static', filename='assets/img/bar_v3.png')}}" alt="chip"></td>
+								<td>&nbsp;</td>
+							</tr>
+							<tr>
+								<td>
+								<table style="width:100%" >
+									<tr>
+										<td>SLOT 4</td>
+										<td><input type="text" name="name_slot_4" value="{{ name_slot_4 }}" placeholder="NAME SLOT"></td>
+									</tr>
+									<tr>
+										<td>DESCRIPT</td>
+										<td><input type="text" name="description_slot_4" v value="{{ description_slot_4 }}" placeholder="DESCRIPTION SLOT"></td>
+									</tr>
+								</table>
+								</td>	
+								<td><input type="checkbox" name="read_slot_4" {{read_slot_4}}></td>	
+							</tr>
+							<tr>
+								<td><img src="{{url_for('static', filename='assets/img/bar_v3.png')}}" alt="chip"></td>
+								<td>&nbsp;</td>
+							</tr>
+						</table>
+						<table  style="width:100%"">
+							<tr>
+								<td><input type="submit" id="submit" class="clearfix btn" value="change config" name="submit_new_configs"></td>	
+							</tr>
+						</table>
+
+					</div>
+						
+
+				</form>
+			</div>								
+		</div>
+	</div>
+</section>
+
+
+
+
+
+<!-- CURRENT CONFIG
+================================================== -->		
+<section id="current_config" class="services margintop60 whitetext" style="padding:60px;background-color:#50dcc9;" >
+	<div class="container">
+		<div class="sow-headline">
+			<h1 class="whitetext">CURRENT CONFIG</h1>
+			<div class="decoration">
+				<div class="decoration-inside">
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<h3  class="whitetext">Slot 1</h3>
+				 Name slot: {{ name_slot_1 }} <br/>
+				 Descripion slot: {{ description_slot_1 }}<br/>
+				 Assing to read: {{ read_slot_1 }}
+				 
+				
+				<h3  class="whitetext">Slot 2</h3>
+				 Name slot: {{ name_slot_2 }} <br/>
+				 Descripion slot: {{ description_slot_2 }}<br/>
+				 Assing to read: {{ read_slot_2 }}
+				 
+				
+				</div>
+			<div class="col-md-6">
+				<h3  class="whitetext">Slot 3</h3>
+				 Name slot: {{ name_slot_3 }} <br/>
+				 Descripion slot: {{ description_slot_3 }}<br/>
+				 Assing to read: {{ read_slot_3 }}
+				 
+				
+				<h3  class="whitetext">Slot 4</h3>
+				 Name slot: {{ name_slot_4 }} <br/>
+				 Descripion slot: {{ description_slot_4 }}<br/>
+				 Assing to read: {{ read_slot_4 }}
+				 
+				
+			</div>
+		</div>
+	</div>
+</section>
+	
+
+
+
+<!-- Disclaimer
+================================================== -->
+<section id="disclaimer" class="whitetext" style="padding:60px;background-color:#50dcc9;" >
+	<div class="container">
+		<div class="so-widget-sow-headline">
+			<div class="sow-headline">
+				<h1 class="whitetext">YOUR EXPERTS SINCE 1997</h1>
+			</div>
+		</div>
+		<br/>
+		<div class="w960 text-center">
+			<p>
+				 Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculusmus. Nulla dui. Fusce feugiat. Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes.
+			</p>
+			<p>
+				Fusce feugiat Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculusmus. Nulla dui. Fusce feugiat. Fusce feugiat Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculusmus. Nulla dui. Fusce feugiat.
+			</p>
+
+			<p>
+				Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculusmus. Nulla dui. Fusce feugiat. Fusce feugiat Praesent vestibulum aenean nonummy hendrerit mauris. Cum sociis natoque penatibus et magnis dis parturient montes ascetur ridiculusmus.
+			</p>
+		</div>
+		<br/>
+		<br/>
+
+		<div class="row">
+			<div class="col-md-6">
+				<h3>01. Central Processing</h3>
+				 Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
+				<h3>02. Real Schemas</h3>
+				 Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.
+				<h3>03. Customer Service</h3>
+				 Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
+			</div>
+			<div class="col-md-6">
+				<h3>04. Data Cover</h3>
+				 Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.
+				<h3>05. Time Management</h3>
+				 Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions.
+				<h3>06. One-to-one Business</h3>
+				 Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+		
+<!-- THE END OF SECTIONS -->	
+	
+<!-- FOOTER
+================================================== -->
+<footer id="footer" class="footer2">
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<small>
+					&copy; <a href="https://www.wowthemes.net/">
+							  Expertum - Free HTML Template by WowThemes.net
+							</a>
+					</small>
+				</div>
+				<div class="col-md-6 text-right">
+					<div class="footer-menu">
+						<ul id="menu-footer-links" class="menu">
+							<li><a href="#"><i class="fa fa-facebook"></i> Like us on Facebook</a></li>
+							<li><a href="#"><i class="fa fa-twitter"></i> Follow us on Twitter</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<!-- SCRIPTS
+================================================== -->
+<script src="{{url_for('static', filename='assets/js/jquery.js')}}"></script>
+<script src="{{url_for('static', filename='assets/js/plugins.js')}}"></script>
+<script src="{{url_for('static', filename='contact/topvalidate.js')}}"></script>
+<script src="{{url_for('static', filename='contact/bottomvalidate.js')}}"></script>
+
+</body>
+</html>
